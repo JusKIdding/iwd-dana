@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('events', function(){
+  return view('pages.event');
+});
 
 Route::get('login', 'UserController@index');
 Route::post('register', 'UserController@register');
