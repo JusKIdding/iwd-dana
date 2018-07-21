@@ -79,7 +79,7 @@
   		</div>
   	</div>
   </div> --}}
-  
+
   <body class="login-layout">
     <div class="main-container">
       <div class="main-content">
@@ -108,18 +108,19 @@
 
                       <div class="space-6"></div>
 
-                      <form>
+                      <form role="Form" method="POST" action="user/login" accept-charset="UTF-8">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <fieldset>
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="text" class="form-control" placeholder="Username" />
+                              <input type="text" name="email" class="form-control" placeholder="Username" />
                               <i class="ace-icon fa fa-user"></i>
                             </span>
                           </label>
 
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="password" class="form-control" placeholder="Password" />
+                              <input type="password" name="password" class="form-control" placeholder="Password" />
                               <i class="ace-icon fa fa-lock"></i>
                             </span>
                           </label>
@@ -132,10 +133,10 @@
                               <span class="lbl"> Remember Me</span>
                             </label>
 
-                            <a href="index.html"><button type="button" class="width-35 pull-right btn btn-sm btn-primary" >
+                            <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" >
                               <i class="ace-icon fa fa-key"></i>
                               <span class="bigger-110">Login</span>
-                            </button></a>
+                            </button>
                           </div>
 
                           <div class="space-4"></div>
@@ -233,32 +234,33 @@
                       <div class="space-6"></div>
                       <p> Enter your details to begin: </p>
 
-                      <form>
+                      <form role="Form" method="POST" action="register" accept-charset="UTF-8">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <fieldset>
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="email" class="form-control" placeholder="Email" />
+                              <input type="email" name="email" class="form-control" placeholder="Email" />
                               <i class="ace-icon fa fa-envelope"></i>
                             </span>
                           </label>
 
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="text" class="form-control" placeholder="Username" />
+                              <input type="text" name="name" class="form-control" placeholder="Username" />
                               <i class="ace-icon fa fa-user"></i>
                             </span>
                           </label>
 
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="password" class="form-control" placeholder="Password" />
+                              <input type="password" name="password" class="form-control" placeholder="Password" />
                               <i class="ace-icon fa fa-lock"></i>
                             </span>
                           </label>
 
                           <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
-                              <input type="password" class="form-control" placeholder="Repeat password" />
+                              <input type="password" name="password_confirmation" class="form-control" placeholder="Repeat password" />
                               <i class="ace-icon fa fa-retweet"></i>
                             </span>
                           </label>
@@ -279,7 +281,7 @@
                               <span class="bigger-110">Reset</span>
                             </button>
 
-                            <button type="button" class="width-65 pull-right btn btn-sm btn-success">
+                            <button type="submit" class="width-65 pull-right btn btn-sm btn-success">
                               <span class="bigger-110">Register</span>
 
                               <i class="ace-icon fa fa-arrow-right icon-on-right"></i>

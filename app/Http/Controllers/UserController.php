@@ -56,4 +56,9 @@ class UserController extends Controller
         return redirect()->to('login');
       }
     }
+
+    public function logout(){
+      Auth::logout();
+      return redirect("login");
+    }
 }

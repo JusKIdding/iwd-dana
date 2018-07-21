@@ -3,9 +3,6 @@
 
 @section('content')
   {{-- Body Content Here --}}
-  <p>
-    TEST
-  </p>
 @endsection
 
 @section('view-styles')
