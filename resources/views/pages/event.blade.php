@@ -395,28 +395,28 @@
             <div class="col-xs-12">
               <!-- PAGE CONTENT BEGINS -->
               @if ($event != null)
-                @foreach ($event as $eve)
+                @foreach ($event as $key=>$eve)
                   <div class="col-sm-8">
                     <div class="tabbable tabs-left">
                     <h3> {{ $eve['event_name']  }} </h3>
                     <img class="eventimg" src="{{ $eve['event_thumbnail'] }}"/>
-                      <ul class="nav nav-tabs" id="myTab3">
+                      <ul class="nav nav-tabs" id="{{ "myTab" . $key }}">
                         <li class="active">
-                          <a data-toggle="tab" href="#det1">
+                          <a data-toggle="tab" href="{{ "#det" . $key }}">
                             <i class="ace-icon fa fa-rocket bigger-120"></i>
                             Details
                           </a>
                         </li>
 
                         <li>
-                          <a data-toggle="tab" href="#info1">
+                          <a data-toggle="tab" href="{{ "#info" . $key }}">
                             <i class="green ace-icon fa fa-info bigger-120"></i>
                             Information
                           </a>
                         </li>
 
                         <li>
-                          <a data-toggle="tab" href="#cont1">
+                          <a data-toggle="tab" href="{{ "#cont" . $key }}">
                             <i class="blue ace-icon fa fa-user bigger-110"></i>
                             Contact <br>Information
                           </a>
@@ -424,13 +424,13 @@
                       </ul>
 
                       <div class="tab-content">
-                        <div id="det1" class="tab-pane in active">
+                        <div id="{{ "det" . $key }}" class="tab-pane in active">
                           <p>
                               {{ $eve['event_details'] }}
                           </p>
                         </div>
 
-                        <div id="info1" class="tab-pane">
+                        <div id="{{ "info" . $key }}" class="tab-pane">
                           <p> <b>Date:</b> {{ $eve['event_date'] }} </p>
                           <p> <b>Time:</b> {{ $eve['event_time'] }} </p>
                           <p> <b>Location:</b> {{ $eve['event_location'] }}</p>
@@ -438,13 +438,15 @@
 
                         </div>
 
-                        <div id="cont1" class="tab-pane">
+                        <div id="{{ "cont" . $key }}" class="tab-pane">
                           <p> Facebook: {{ $eve['contact_info_social_facebook'] }} </p>
                           <p>	Twitter: {{ $eve['contact_info_social_twitter'] }} </p>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  {{ $key++ }}
                 @endforeach
               @endif
 
