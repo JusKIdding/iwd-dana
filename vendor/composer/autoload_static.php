@@ -285,6 +285,7 @@ class ComposerStaticInit841480411ca6caf8c9cf59d04588e233
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Event' => __DIR__ . '/../..' . '/app/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -292,6 +293,8 @@ class ComposerStaticInit841480411ca6caf8c9cf59d04588e233
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashBoardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashBoardController.php',
+        'App\\Http\\Controllers\\DataController' => __DIR__ . '/../..' . '/app/Http/Controllers/DataController.php',
+        'App\\Http\\Controllers\\EventController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventController.php',
         'App\\Http\\Controllers\\RunnerReferController' => __DIR__ . '/../..' . '/app/Http/Controllers/RunnerReferController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -314,6 +317,7 @@ class ComposerStaticInit841480411ca6caf8c9cf59d04588e233
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'CreateDataTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_28_164552_create_data_table.php',
         'CreateEventTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_21_135019_create_event_table.php',
         'CreateItemTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_21_124102_create_item_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

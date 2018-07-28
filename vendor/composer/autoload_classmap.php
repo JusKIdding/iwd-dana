@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Event' => $baseDir . '/app/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -14,6 +15,8 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DashBoardController' => $baseDir . '/app/Http/Controllers/DashBoardController.php',
+    'App\\Http\\Controllers\\DataController' => $baseDir . '/app/Http/Controllers/DataController.php',
+    'App\\Http\\Controllers\\EventController' => $baseDir . '/app/Http/Controllers/EventController.php',
     'App\\Http\\Controllers\\RunnerReferController' => $baseDir . '/app/Http/Controllers/RunnerReferController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -36,6 +39,7 @@ return array(
     'Carbon\\CarbonPeriod' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CreateDataTable' => $baseDir . '/database/migrations/2018_07_28_164552_create_data_table.php',
     'CreateEventTable' => $baseDir . '/database/migrations/2018_07_21_135019_create_event_table.php',
     'CreateItemTable' => $baseDir . '/database/migrations/2018_07_21_124102_create_item_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

@@ -23,5 +23,6 @@ Route::post('register', 'UserController@register');
 Route::post('user/login', 'UserController@login');
 Route::get('dashboard', 'DashBoardController@index');
 Route::get('runner', 'RunnerReferController@index');
+Route::get('data', 'DataController@index');
 
 Route::get("logout", 'UserController@logout');
